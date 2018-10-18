@@ -1,0 +1,84 @@
+body {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 48px;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+.highlight {
+  font-size: 75px !important;
+}
+
+#MyID_jhskhd_123 {
+  border: 6px solid orange;
+}
+
+.multiline {
+  background: rgb(125,48,255);
+  background: rgba(125,48,255,.5);
+
+  color: #33ff88;
+  border-bottom: 3px dashed #000;
+
+}
+
+.meinrechteck {
+  width: 300px;
+  height: 150px;
+  background: brown;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.meinrechteck2 {
+  position: fixed;
+  top: 150px;
+  right: 10px;
+
+  width: 200px;
+  height: 80px;
+  background: rgba(0,0,0,0.5);
+}
+
+.meinrechteck3 {
+  position: fixed;
+  bottom: 120px;
+  right: 70px;
+
+  width: 250px;
+  height: 30px;
+  background: purple;
+}
+
+.meinrechteck::after {
+  content: '\003E';
+  display: block;
+  color: white;
+  background: blue;
+  padding: 20px;
+}
+.meinrechteck::before {
+  content: '\003E';
+  display: block;
+  color: white;
+  background: orange;
+  padding: 20px;
+}
+
+
+ul.horizontal {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+ul.horizontal li {
+  display: inline-block;
+  background: rgba(255, 0, 0, 0.5);
+}
