@@ -1,6 +1,14 @@
 :root {
   --screen-max: 1200px;
   --base-font: 'Montserrat', sans-serif;
+  --base-font2: 'Pridi', 'Times New Roman', serif;
+
+  --grey-light: #fefefe;
+  --grey-dark: #525252;
+  --grey: #696969;
+
+  --font-color-light: var(--grey-dark);
+
 }
 
 @font-face {
@@ -21,6 +29,22 @@
     font-weight: lighter;
 }
 
+@font-face {
+    font-family: 'Pridi';
+    src: url(../fonts/Pridi-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Pridi';
+    src: url(../fonts/Pridi-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Pridi';
+    src: url(../fonts/Pridi-Light.ttf);
+    font-weight: lighter;
+}
+
 html, body {
   margin: 0;
 }
@@ -28,6 +52,10 @@ html, body {
 body {
   font-family: var(--base-font);
   font-size: 100%;
+  background: orange;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 html * {
@@ -50,11 +78,11 @@ header img {
   display: block;
 }
 
-header .inner-wrapper {
+header .inner-wrapper,
+footer .inner-wrapper {
   position: relative;
   max-width: var(--screen-max);
   margin: 0 auto;
-  background: red;
 }
 
 header h1 {
@@ -65,9 +93,41 @@ header h1 {
 }
 
 main {
+  flex: 1;
   background: lightgrey;
 }
 
 footer {
-  background: #333;
+  background: var(--grey-dark);
+}
+
+footer a {
+  color: var(--grey-light);
+  font-family: var(--base-font2);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-top {
+  display: flex;
+}
+
+footer .footer-left {
+  flex: 1;
+}
+
+footer .footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+footer .footer-bottom {
+  color: var(--grey-light);
+  opacity: .15;
 }
