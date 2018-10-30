@@ -18,6 +18,12 @@
 
 @font-face {
     font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Montserrat';
     src: url(../fonts/Montserrat-Bold.ttf);
     font-weight: bold;
 }
@@ -61,40 +67,58 @@ html * {
   box-sizing: border-box;
 }
 
+.main-navigation {
+  display: none;
+}
+
 #logo {
   position: fixed;
   z-index: 100;
   top: 0;
   left: 5em;
-  width: 5em;
-  height: 5em;
+  width: 7em;
+  height: 7em;
 }
 #logo a {
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--grey-dark) url('../img/logo_muthwill.svg') no-repeat;
-  background-size: contain;
+  background: var(--grey-dark) url('../img/logo_muthwill.svg') no-repeat center center;
+  background-size: 80%;
   text-indent: -9999em;
   overflow: hidden;
 }
 
 #logo-part-2 {
   position: absolute;
+  z-index: 100;
   top: 0;
-  left: 10em;
-  width: 9em;
-  height: 5em;
+  left: 12em;
+  width: 17em;
+  height: 7em;
 }
 
 #logo-part-2 a {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.3rem;
+  line-height: 1em;
+  font-weight: 500;
+  color: var(--grey);
 }
 
-header {
+#logo-part-2 a span {
+  display: inline;
+}
+
+header#main-header {
   position: relative;
   width: 100%;
   height: 45vw;
@@ -102,7 +126,7 @@ header {
   overflow: hidden;
 }
 
-header img {
+header#main-header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -110,14 +134,15 @@ header img {
   display: block;
 }
 
-header .inner-wrapper,
+header#main-header .inner-wrapper,
+.content-element .inner-wrapper,
 footer .inner-wrapper {
   position: relative;
   max-width: var(--screen-max);
   margin: 0 auto;
 }
 
-header h1 {
+header#main-header h1 {
   position: absolute;
   left: 0;
   bottom: 0;
