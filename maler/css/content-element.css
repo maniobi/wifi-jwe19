@@ -5,15 +5,6 @@ section.content-element {
 
 .content-element .teaser {
   position: relative;
-
-  background:
-  -webkit-linear-gradient(rgba(255,125,0,0.5), rgba(255,125,0,0.5)),
-  url(../img/example-content-image.jpg);
-
-  background:
-  linear-gradient(rgba(255,125,0,0.5), rgba(255,125,0,0.5)),
-  url(../img/example-content-image.jpg);
-
   background-size: cover;
   min-height: 35vw;
 }
@@ -22,10 +13,27 @@ section.content-element {
   position: relative;
   z-index: 10;
 }
+.content-element .content-text img {
+  display: block;
+  margin: 1em 0;
+}
+
+.content-element a.button {
+  display: inline-block;
+  padding: 1em 2em;
+  background: orange;
+  color: white;
+  text-decoration: none;
+}
+
+.content-element a.button:hover {
+  opacity: .6;
+}
 
 @media screen and (min-width: 576px)  {
 
-  .content-element .teaser p {
+  .content-element .teaser p,
+  .content-element .content-text p {
     padding-right: 45%;
   }
 
