@@ -8,6 +8,8 @@
   --grey: #696969;
 
   --font-color-light: var(--grey-dark);
+
+  --main-padding: 1rem;
 }
 
 @font-face {
@@ -145,7 +147,11 @@ header#main-header h1 {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: green;
+  font-family: 'Pridi', Geordia, serif;
+  font-weight: lighter;
+  font-size: 5rem;
+  line-height: 1.2em;
+  text-transform: uppercase;
 }
 
 main {
