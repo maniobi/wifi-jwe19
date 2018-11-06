@@ -1,0 +1,22 @@
+#flexDiv {
+  display: flex;
+}
+
+#flexDiv > div {
+  flex: 1;
+
+}
+
+
+#specialImage {
+  width: 300px;
+}
+
+#specialLink {
+  width: 300px;
+  display: inline-block;
+  background: red;
+}
+
+strong {
+}

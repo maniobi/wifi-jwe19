@@ -5,10 +5,11 @@ section.content-element {
 
 .content-element h2.content-header {
   font-family: 'Pridi', sans-serif;
-  font-size: 3.5rem;
-  line-height: 2em;
+  font-size: 9.5vw;
+  line-height: 1.2em;
   font-weight: lighter;
   text-transform: uppercase;
+  word-break: break-word;
 }
 
 .content-element .teaser {
@@ -22,11 +23,15 @@ section.content-element {
   z-index: 10;
 }
 
+.content-element img {
+  max-width: 100%;
+}
+
 .content-element .teaser img {
   display: block;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center top;
 }
@@ -50,6 +55,10 @@ section.content-element {
 
 @media screen and (min-width: 576px)  {
 
+  .content-element h2.content-header {
+    font-size: 3.5rem;
+  }
+
   .content-element .teaser {
     display: flex;
     align-items: center;
@@ -65,12 +74,13 @@ section.content-element {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
     z-index: -1;
   }
 
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1250px) {
 
   header#main-header h1,
   .content-element > header,
