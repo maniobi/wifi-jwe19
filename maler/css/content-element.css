@@ -53,6 +53,12 @@ section.content-element {
   opacity: .6;
 }
 
+.content-element.form {
+  background-color: var(--grey-dark);
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
+}
+
 @media screen and (min-width: 576px)  {
 
   .content-element h2.content-header {

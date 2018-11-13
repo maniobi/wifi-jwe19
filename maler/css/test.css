@@ -1,0 +1,8 @@
+.row > .col-sm {
+  background: purple;
+}
+
+.headerImage {
+  background: silver;
+  height: 500px;
+}

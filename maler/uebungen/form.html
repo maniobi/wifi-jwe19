@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formular-Test</title>
+</head>
+
+<body>
+  <form method="post" action="form.html">
+    <p>
+      <label for="female">Frau</label>
+      <input type="radio" name="gender" id="female" value="female">
+
+      <label for="male">Mann</label>
+      <input type="radio" name="gender" id="male" value="male">
+    </p>
+
+    <p>
+      <label for="firstname">Vorname</label>
+      <input type="text" name="firstname" id="firstname" value="" placeholder="Vorname">
+    </p>
+    <p>
+      <label for="lastname">Nachname</label>
+      <input type="text" name="lastname" id="lastname" value="" placeholder="Nachname">
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="" placeholder="yourmail@domain.at">
+    </p>
+    <p>
+      <label for="date">Email</label>
+      <input type="date" name="date" id="date" value="" placeholder="Datum">
+    </p>
+
+    <p>
+      <label for="passwordId">Passwort</label>
+      <input type="password" name="password" id="passwordId" value="">
+    </p>
+
+    <p>
+        <label for="socks">Wie viele paar Socken kannst du gleichzeitig tragen (Einzelstücke angeben)?</label>
+        <input type="number" name="socks" id="socks" value="" min="4" max="30" step="2">
+    </p>
+
+    <p>
+      <label for="animalfriend">Welcher Typ Mensch bist du?</label>
+    </p>
+    <p>
+      <select id="animalfriend" name="animalfriend" multiple required tabindex="1">
+        <option value="katze123">Katzenmensch</option>
+        <option value="wauwau123">Hundemensch</option>
+        <option value="knabber123">Hamstermensch</option>
+        <option value="zwitscher123">Vogelmensch</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="notes"></label>
+      <textarea name="notes" id="notes" rows="8" cols="80"></textarea>
+    </p>
+
+    <p>
+        <label for="agb">AGB, ja ok!</label>
+        <input type="checkbox" name="agb" id="agb" value="ok" required>
+    </p>
+    <p>
+      <input type="submit" name="submit" id="submit" value="Jetzt absenden!">
+      <button type="button">Absenden?</button>
+      <input type="reset" name="reset" value="Alles weg?">
+    </p>
+
+  </form>
+</body>
+
+</html>
