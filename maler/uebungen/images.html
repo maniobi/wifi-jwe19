@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Bilder</title>
+    <link rel="stylesheet" href="css/responsive-images.css">
+  </head>
+  <body>
+
+    <figure>
+      <picture>
+        <source srcset="http://placehold.it/320x240 1x, http://placehold.it/640x480 2x" media="(max-width: 320px)" />
+        <source srcset="http://placehold.it/800x480 1x, http://placehold.it/1600x960 2x" media="(max-width: 800px)" />
+        <source srcset="http://placehold.it/1920x1080 1x, http://placehold.it/3840x2160 2x" media="(min-width: 801px)" />
+        <img class="responsive" src="http://placehold.it/1920x1080" alt="" />
+      </picture>
+      <figcaption>
+        Das hier ist ein adaptives Bild © Manuel Obermoser
+      </figcaption>
+    </figure>
+
+
+    <figure>
+      <img
+        class="responsive"
+        src="http://placehold.it/1920x1080"
+        alt=""
+        srcset="http://placehold.it/320x240 320w,
+                http://placehold.it/800x480 800w,
+                http://placehold.it/1920x1080
+                "
+      />
+      <figcaption>
+        Das hier ist ein adaptives Bild © Manuel Obermoser
+      </figcaption>
+    </figure>
+
+  </body>
+</html>

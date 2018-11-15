@@ -7,7 +7,10 @@
 </head>
 
 <body>
-  <form method="post" action="form.html">
+  <form method="post" action="form.html" target="_blank">
+
+    <fieldset>
+      <legend>Ihre persönlichen Daten</legend>
     <p>
       <label for="female">Frau</label>
       <input type="radio" name="gender" id="female" value="female">
@@ -29,9 +32,12 @@
       <input type="email" name="email" id="email" value="" placeholder="yourmail@domain.at">
     </p>
     <p>
-      <label for="date">Email</label>
+      <label for="date">Datum</label>
       <input type="date" name="date" id="date" value="" placeholder="Datum">
     </p>
+
+  </fieldset>
+  <fieldset>
 
     <p>
       <label for="passwordId">Passwort</label>
@@ -54,7 +60,7 @@
         <option value="zwitscher123">Vogelmensch</option>
       </select>
     </p>
-
+    </fieldset>
     <p>
       <label for="notes"></label>
       <textarea name="notes" id="notes" rows="8" cols="80"></textarea>
