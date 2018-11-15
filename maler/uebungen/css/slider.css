@@ -1,0 +1,47 @@
+.slider-holder {
+  width: 640px;
+  height: 480px;
+  background: yellow;
+  border: 1px solid black;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-holder {
+  width: calc(640px * 3);
+  height: 480px;
+  clear: both;
+  position: relative;
+  transition: left 1s ease;
+}
+
+img.slider-image {
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#img1:target ~ .image-holder {
+  left: 0;
+}
+
+#img2:target ~ .image-holder {
+  left: -640px;
+}
+
+#img3:target ~ .image-holder {
+  left: calc(-640px * 2);
+}
+
+.button-holder {
+  position: relative;
+  top: -30px;
+}
+
+.slider-change {
+  display: inline-block;
+  padding: 5px;
+  background: white;
+  color: silver;
+}
