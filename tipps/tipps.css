@@ -1,0 +1,96 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  /* all: unset; */
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.content-element {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teaser-wrapper .teaser {
+  /*
+    Eigenschaften die bei jedem Teaser-Element gleich sind
+  */
+  display: block;
+  float: left;
+  width: 300px;
+  height: auto;
+  background: grey;
+
+  /*
+    Abstand zwischen den Teasern
+  */
+  margin-left: 10px;
+}
+
+/* möchte man das 1. Element anders als die anderen? */
+.teaser-wrapper .teaser:first-child {
+  margin-left: 0;
+}
+
+.teaser-wrapper .teaser::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  visibility: hidden;
+  clear: both;
+}
+
+  /* Variante 1 */
+.teaser-image {
+  display: block;
+}
+
+/* Variante 2 */
+.teaser-wrapper .teaser img {
+  width: 90%;
+  margin: 5% auto;
+
+  box-shadow: 0 5px 10px 3px rgba(0,0,0,0.5);
+}
+
+/* Horizontale Linie (Horizontal row)*/
+hr {
+  display: block;
+  float: none;
+  clear: both;
+  margin: 30px 0;
+  background: orange;
+}
+
+.teaser-flex-wrapper {
+  clear: both;
+  margin: 30px 0;
+  background: #333;
+
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.teaser-flex-wrapper .teaser {
+  flex: 1;
+  background: silver;
+  padding: 20px;
+  text-align: center;
+}
+.teaser-flex-wrapper .teaser-image {
+  display: inline-block;
+}
