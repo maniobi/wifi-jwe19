@@ -1,0 +1,298 @@
+html * {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/*var*/
+:root {
+    --brown: #D0B085;
+    --grey: #707070;
+    --white: #FFFFFF;
+
+    /*BUTTON VARIABLEN*/
+    --btn-border: solid var(--brown) 2px;
+    --btn-padding: 0.75em 1.2em 0.45em;
+    --btn-margin: 1em auto;
+
+
+    /* Costum Breakpoints*/
+
+    --min-xs: 480px;
+    --min-sm: 768px;
+    --min-md: 992px;
+    --min-lg: 1280px;
+    --min-xlg: 1600px;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.teaser {
+    padding-top: 4em;
+    z-index: -1;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.award {
+    position: inherit;
+}
+
+
+.award img {
+    width: 30%;
+    text-align: right;
+    position: absolute;
+    right: 35%;
+    transform: translateY(-40%);
+    transition: transform .5s ease-in-out;
+}
+
+.award img:hover {
+    transform: translateY(-50% ) scale(1.1);
+    transition: transform .5s ease-in-out;
+}
+
+.product-range {
+    width: 80%;
+    margin: 5em auto;
+}
+
+.four-colums {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.four-colums img {
+    display: block;
+    margin: 0;
+    transition: opacity .2s ease-in-out;
+    width: 100%;
+    height: 55vw;
+    object-fit: cover;
+}
+.four-colums .item:hover img{
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.four-colums .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(177,5,5,.75);*/
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    opacity: 1;
+    margin: 0;
+    z-index: -1;
+    border: 3px solid var(--brown);
+}
+
+.item {
+    position: relative;
+}
+
+.item-inner {
+    position: relative;
+    width: 100%;
+}
+
+.four-colums .overlay p {
+    line-height: 1em;
+    color: var(--brown);
+}
+
+
+.four-colums .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 60%;
+}
+
+.order-button {
+    text-align: center;
+    margin: 3em auto;
+    width: 80%;
+}
+
+.button {
+    border: var(--btn-border);
+    margin: var(--btn-margin);
+    padding: var(--btn-padding);
+    text-align: center;
+    width: fit-content;
+    text-transform: uppercase;
+    background: var(--white);
+}
+
+.button a {
+    color: var(--brown);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    font-size: 1.3rem;
+}
+
+@media screen and (min-width: 480px) {
+
+    .teaser {
+        padding-top: 0;
+        z-index: -1;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .award img {
+        max-width: 150px;
+        text-align: right;
+        position: absolute;
+        right: 37.5%;
+        transform: translateY(-95%);
+    }
+
+    .product-range {
+        width: 80%;
+        margin: 5em auto;
+    }
+    .four-colums {
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1;
+    }
+    .four-colums img {
+        height: 55vw;
+    }
+
+    .four-colums .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /*background-color: rgba(177,5,5,.75);*/
+        color: white;
+        text-align: center;
+        font-size: 1.8em;
+        opacity: 1;
+        z-index: -1;
+    }
+
+    .item {
+        display: flex;
+    }
+
+    .four-colums .overlay p {
+        line-height: 1em;
+        color: var(--brown);
+    }
+
+    .four-colums img:hover{
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+    .four-colums .inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 60%;
+    }
+    .order-button {
+        text-align: center;
+        margin: 5em auto;
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .award img {
+        right: 40%;
+    }
+
+    .teaser {
+        height: 55vh;
+    }
+
+    .four-colums {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        flex: 50%;
+        padding: 1em;
+    }
+
+    .four-colums img {
+        height: 25vw;
+    }
+
+    .item-inner {
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .teaser {
+        height: 75vh;
+    }
+    .award img {
+        max-width: 200px;
+        text-align: right;
+        position: absolute;
+        right: 10%;
+        transform: translateY(-65%);
+    }
+
+    .item {
+        flex: 1;
+    }
+
+    .four-colums img {
+        height: 13vw;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1280px) {
+
+    .row,
+    .product-range,
+    .footer,
+    .content {
+        max-width: 1280px;
+    }
+
+    .four-colums img {
+        height: 200px;
+    }
+
+}
+

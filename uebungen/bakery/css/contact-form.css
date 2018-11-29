@@ -1,0 +1,96 @@
+html * {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+.contactsalutation_maddam {
+    margin-bottom: 1rem;
+}
+
+.contactsalutation input{
+    margin-right: 2.5em;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: var(--grey);
+}
+
+#contact-form input[type=text],
+#contact-form input[type=email],
+#contact-form input[type=date],
+#contact-form textarea {
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 3em;
+    border: 1.4px solid var(--brown);
+    font-family: var(--main);
+    color: var(--grey);
+    background-color: white;
+}
+
+#contact-form textarea {
+    min-height: 10em;
+}
+
+div .checkbox {
+    font-size: 0.7em;
+    line-height: 0.8em;
+    font-weight: normal;
+}
+div .checkbox a {
+    color: var(--brown);
+    font-weight: normal;
+}
+
+#contact-form input[type=submit] {
+
+    border: var(--btn-border);
+    margin: var(--btn-margin);
+    padding: var(--btn-padding);
+    text-align: center;
+    width: fit-content;
+    text-transform: uppercase;
+    background: var(--brown);
+    color: white;
+    font-family: var(--main);
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+
+    .formular {
+        margin-right: 5em;
+    }
+
+    .contactsalutation {
+        margin-bottom: 1em;
+    }
+
+    #contact-form label {
+    }
+
+    #contact-form input[type=text],
+    #contact-form input[type=email],
+    #contact-form input[type=date],
+    #contact-form textarea {
+        width: 100%;
+        padding: 1em;
+        margin-bottom: 2em;
+        border: 1.4px solid #D0B085;
+        font-family: var(--main);
+        font-size: 0.8em;
+    }
+
+    #contact-form textarea {
+        min-height: 10em;
+    }
+}

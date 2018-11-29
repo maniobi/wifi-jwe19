@@ -1,0 +1,44 @@
+body {
+  height: 200vh;
+  background: #333;
+  color: #fff;
+  line-height: 1.5em;
+}
+
+div {
+  color: black;
+}
+
+
+.hello-static,
+.hello-relative,
+.hello-absolute,
+.hello-fixed {
+  border: 3px solid grey;
+  width: 300px;
+  height: 200px;
+}
+
+.hello-static {
+  position: static;
+  background: lightgreen;
+}
+
+.hello-relative {
+  position: relative;
+  background: lightblue;
+}
+
+.hello-absolute {
+  position: absolute;
+  left: 100px;
+  bottom: 35px;
+  background: lightcoral;
+}
+
+.hello-fixed {
+  position: fixed;
+  top: 200px;
+  right: 50px;
+  background: yellow;
+}

@@ -3,8 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Scripts einbinden</title>
+    <link rel="stylesheet" href="slick/slick.css">
   </head>
   <body>
+
+    <div class="slick">
+
+      <img class="responsive" src="http://placehold.it/1920x1080?text=Bild1" alt="" />
+      <img class="responsive" src="http://placehold.it/1920x1080?text=Bild2" alt="" />
+    <img class="responsive" src="http://placehold.it/1920x1080?text=Bild3" alt="" />
+    </div>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="slick/slick.min.js"></script>
+
+    <script>
+        $(".slick").slick();
+    </script>
 
   </body>
 </html>
