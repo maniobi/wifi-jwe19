@@ -1,0 +1,30 @@
+.lightbox-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.lightbox-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 75vh;
+  height: auto;
+  object-fit: cover;
+
+}
+
+@media (min-width: 320px) {
+  .lightbox-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 576px) {
+  .lightbox-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
