@@ -1,0 +1,21 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+
+.calculator {
+  width: 30%;
+  background: silver;
+}
+
+input.screen {
+  width: 100%;
+  height: 100px;
+}
+
+input[type="button"] {
+  background: grey;
+  width: 30px;
+  height: 30px;
+}
