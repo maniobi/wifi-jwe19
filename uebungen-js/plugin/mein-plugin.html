@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Das ist mein eigenes Plug-in mit jQuery</title>
+  <link rel="stylesheet" href="basic.css">
+</head>
+
+<body>
+
+  <p>Lorem ipsum dolor sit amet, consectetur
+    adipisicing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua. </p>
+
+  <p>Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute <span class="see-better">irure dolor</span> in reprehenderit
+    in voluptate velit esse cillum dolore eu fugiat
+    nulla pariatur. <span class="see-better">Oh yeah... These words...</span>Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt
+    mollit anim id est laborum.</p>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="myplugin.jquery.js"></script>
+  <script>
+    $('.see-better').highlightText();
+  </script>
+</body>
+
+</html>

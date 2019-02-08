@@ -1,12 +1,12 @@
 (function ( $ ) {
 
-    $.fn.myplugin = function( options ) {
+    $.fn.highlightText = function( options ) {
 
         // Standard-Werte festlegen
         var settings = $.extend({
             // Standard-Werte
-            color: "#556b2f",
-            backgroundColor: "white"
+            color: "white",
+            backgroundColor: "orange"
         }, options );
 
         // Rückgabe basierend on the settings variable.
