@@ -1,4 +1,4 @@
-<h1>Willkommen beim JWE-2018</h1>
+<h1>Willkommen beim JWE-2019/20</h1>
 
 <h2>Links</h2>
 
