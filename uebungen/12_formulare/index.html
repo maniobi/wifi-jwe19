@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang='de'>
+	<head>
+		<title>HTML Vorlage</title>
+		<meta charset='utf-8' />
+		<!--[if lt IE 9]>
+			<script src="html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+
+		<form method='GET' action='index.html' >
+			<fieldset>
+				<legend>Persönliche Daten</legend>
+				<p>
+					<label for='female'>Frau</label>
+					<input type='radio' name='gender' id='female' value='female' required />
+
+					<label for='male'>Mann</label>
+					<input type='radio' name='gender' id='male' value='male' />
+				</p>
+
+				<p>
+					<label for='firstname'>Vorname</label>
+					<input type='text' id='firstname' name='firstname' placeholder='Vorname' />
+				</p>
+
+				<p>
+					<label for='lastname'>Nachname</label>
+					<input type='text' id='lastname' name='lastname' placeholder='Nachname' />
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Zusatz-Daten</legend>
+				<p>
+					<label for='password'>Passwort</label>
+					<input type='password' id='password' name='password' />
+				</p>
+
+				<p>
+					<label for='socks'>Wieviele Paar Socken kannst du gleichzeitig tragen (Einzelstücke angeben)?</label>
+					<input type='number' id='socks' name='socks' min='4' max='30' step='2'/>
+				</p>
+			</fieldset>
+
+			<p>
+				<select id='animalfriend' name='animalfriend[]' required multiple>
+					<option selected value="">Bitte wählen Sie eine option</option>
+
+					<optgroup label="Europa">
+						<option value="1">Eins</option>
+						<option value="2">Zwei</option>
+						<option value="3">Drei</option>
+					</optgroup>
+
+
+					<optgroup label="Asien">
+						<option value="1">Eins</option>
+						<option value="2">Zwei</option>
+						<option value="3">Drei</option>
+					</optgroup>
+
+				</select>
+			</p>
+			<p>
+				<label for='notes'>Anmerkung</label>
+				<textarea id='notes' name='notes' maxlength="10"></textarea>
+			</p>
+
+			<p>
+				<label for='agb'>Ja, ich will</label>
+				<input type='checkbox' name='agb' id='agb' value="AGB habe ich akzeptiert" required />
+			</p>
+
+			<p>
+				<input type='submit' value='Absenden' />
+			</p>
+
+		</form>
+
+	</body>
+</html>

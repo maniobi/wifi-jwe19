@@ -1,19 +1,29 @@
 <!doctype html>
 <html lang='de'>
-	<head>
-		<title>09 - Bilder</title>
-		<meta charset='utf-8' />
-	</head>
-	<body>
 
-		<img
-			src='images/deathvalley.jpg'
-			alt='Eine Abbildung des Death Valley.'
-			title='Im Death Valley ists leicht heiß'
-			width='100%'
-		>
+<head>
+	<title>09 - Bilder</title>
+	<meta charset='utf-8' />
+</head>
 
-		<img src='https://www.nationalparks.org/sites/default/files/styles/wide_2x/public/20160209%20-%20shutterstock_84004441.jpg?itok=7pUj09hx&timestamp=1470746468' />
+<body>
 
-	</body>
+<figure>
+	<picture>
+		<source media="(min-width: 650px)" srcset="http://placehold.it/650x320">
+		<source media="(min-width: 320px)" srcset="http://placehold.it/320x140">
+		<source media="(max-width: 319px)" srcset="http://placehold.it/240x100">
+		<img src="http://placehold.it/1920x1080" alt="Responsive Image" style="width: 100%;">
+	</picture>
+
+	<figcaption>
+		Bildunterschrift mit mehreren Worten
+	</figcaption>
+
+</figure>
+
+
+
+</body>
+
 </html>
