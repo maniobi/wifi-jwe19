@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; }
+
+div {
+	border: 1px solid black;
+	position: static;
+	background-color: white;
+	padding: 2em;
+}
+
+.offset-top {
+	top: 1em;
+}
+.offset-left {
+	left: 1em;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+	background: yellow;
+}
+
+.fixed {
+	position: fixed;
+	background: #aaa;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: green;
+}
+
+.nav-2 {
+	top: 83px;
+}

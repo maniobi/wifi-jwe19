@@ -1,0 +1,33 @@
+/*
+TAG Selektor (alle <div> Tags)
+*/
+div {
+	border: 1px solid black;
+	height: 50px;
+	width: 300px;
+}
+
+/* ID Selektor */
+
+#br-zec64 {
+	background-color: red;
+	background-color: #acacac;
+	background-color: #eee;
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Klassen Selektoren */
+
+.car {
+	border-bottom: 10px solid black;
+}
+
+.peugeot {
+	border-color: red;
+	border:
+}
+
+#salzburg .car {
+	border-color: blue;
+}

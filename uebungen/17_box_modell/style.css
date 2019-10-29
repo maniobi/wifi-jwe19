@@ -1,0 +1,15 @@
+div {
+	width: 200px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+
+	border: 1px solid black;
+
+	margin: 10px;
+}
+
+.border-box {
+	box-sizing: border-box;
+}
