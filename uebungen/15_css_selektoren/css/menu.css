@@ -1,0 +1,45 @@
+#mainMenu {
+    background-color: silver;
+}
+
+#mainMenu a {
+    color: #000;
+    text-decoration: none;
+}
+
+#mainMenu ul li ul li a {
+    font-size: 12px;
+}
+
+#mainMenu ul li ul li ul li a {
+    font-size: 8px;
+}
+
+#mainMenu ul.level-1 > li > a {
+    color: green;
+}
+
+#mainMenu ul.level-1 {
+    border: 1px solid red;
+}
+
+#mainMenu ul.level-2 {
+    border: 1px solid green;
+}
+
+#mainMenu ul.level-3 {
+    border: 1px solid blue;
+}
+
+#mainMenu ul.level-1 {
+    list-style: none;
+    padding-left: 0;
+}
+
+#mainMenu li.submenu-item {
+    background-color: yellow;
+}
+
+#mainMenu li.submenu-item:hover {
+    background-color: orange;
+}

@@ -1,0 +1,17 @@
+#mainMenu ul li {
+    background: coral;
+    display: inline-block;
+}
+
+#mainMenu ul li a {
+    display: block;
+    background-color: purple;
+    padding: 1em;
+}
+
+.marked-text {
+    color: #fff;
+    background-color: blue;
+    padding: 10px;
+    display: inline;
+}

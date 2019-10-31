@@ -1,0 +1,28 @@
+#mainMenu ul {
+    display: flex;
+}
+
+#mainMenu ul li {
+    background: lightblue;
+    flex: 1;
+    padding: 0 3px 0;
+}
+
+#mainMenu ul li a {
+    padding: 1em;
+    display: block;
+    text-align: center;
+    background: #999;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    transform: scaleX(1) scaleY(1) rotate(5deg);
+}
+#mainMenu ul li a:hover {
+    color: #fff;
+    background: #000;
+    transform: none;
+}
