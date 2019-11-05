@@ -1,0 +1,11 @@
+li a {
+    color: red;
+    font-weight: bold;
+    background: green;
+}
+
+a {
+    color: purple;
+    font-weight: normal;
+    background: black;
+}

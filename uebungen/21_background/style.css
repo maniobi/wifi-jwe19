@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1; /* Für den IE6 und IE7 */
+}
+
+.clear {
+	clear: both;
+}
+
+html, body { height: 100%; }
+
+body {
+	background-color: #333;
+	background-image: url(dark-triangles.png);
+
+	background-position: center bottom; /* X & Y links, vertikal zentriert */
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    background: #333 url(dark-triangles.png) center center no-repeat / cover;
+}
+
+.extra-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 5% 10px 2em 13ex;
+    transition: transform 0.5s ease-out 1s, background 3s linear;
+}
+
+.extra-element:hover {
+    transform: translateX(-50%) translateY(-50%) rotate(270deg);
+    background-color: blue;
+}

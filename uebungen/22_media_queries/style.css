@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 12er Grid */
+*[class^='col-']{
+	float: left;
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after { clear: both; }
+.clearfix { *zoom: 1; /* Für den IE6 und IE7 */ }
+
+.row::before, .row::after {
+  content: " ";
+  display: table;
+}
+.row::after { clear: both; }
+.row { *zoom: 1; /* Für den IE6 und IE7 */ }
+
+.col-1 { width: 8.3333333%; }
+.col-2 { width: 16.666666667%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.333333333%; }
+.col-5 { width: 41.666666667%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.333333333%; }
+.col-8 { width: 66.666666666%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.333333333%; }
+.col-11 { width: 91.666666667%; }
+.col-12 { width: 100%; }
+
+
+
+
+
+
+img { max-width: 100%; height: auto; }
+
+
+/* mobile first */
+.phone { display: block; }
+.tablet, .desktop { display: none; }
+
+
+@media (min-width: 440px){
+	.phone { display: none; }
+	.tablet { display: block; }
+}
+
+@media (min-width: 1300px){
+	.tablet { display: none; }
+	.desktop { display: block; }
+}

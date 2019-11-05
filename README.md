@@ -28,3 +28,7 @@ https://wiki.selfhtml.org/wiki/HTML/Universalattribute
 
 https://de.wikipedia.org/wiki/Namenskonvention_(Datenverarbeitung)
 https://en.wikipedia.org/wiki/Snake_case
+
+https://cssgradient.io/
+
+https://google-webfonts-helper.herokuapp.com/fonts
