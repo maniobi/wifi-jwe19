@@ -1,7 +1,10 @@
+@import "content.css";
+
 :root {
   --mobile-horz-space: 12px;
   --mobile-vert-space: 25px;
 }
+
 
 * {
     box-sizing: border-box;
@@ -64,6 +67,7 @@ body {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #mainNavigation ul li a {
@@ -72,7 +76,93 @@ nav ul {
     padding: 1em;
     color: #000;
     font-weight: 700;
+    text-transform: uppercase;
     background: rgb(222,222,222);
     background: linear-gradient(0deg, rgba(222,222,222,1) 0%, rgba(255,255,255,1) 89%, rgba(224,224,224,1) 100%);
     border-bottom: 1px solid #d4cfcf;
+}
+
+
+
+.header-text {
+    padding-left: var(--mobile-horz-space);
+    padding-right: var(--mobile-horz-space);
+}
+
+#headerImage section {
+    background-color: #e3e3e3;
+    overflow: hidden;
+}
+
+.header-text h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+}
+.header-text .pre-header {
+    font-size: 0.5em;
+    text-transform: none;
+    font-weight: 500;
+    display: block;
+}
+.header-text p {
+    margin-top: 0;
+}
+.text-red {
+    color: #b9151c;
+}
+
+#headerOverlay {
+    background: url(../img/overlay-bg.png) no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+}
+#headerOverlay img {
+    height: 100px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding-right: var(--mobile-horz-space);
+}
+
+#headerOverlay > .header-overlay-text {
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    padding-left: var(--mobile-horz-space);
+    padding-right: var(--mobile-horz-space);
+}
+
+footer {
+    color: #b2b2b2;
+}
+footer address {
+    margin-bottom: var(--mobile-vert-space);
+}
+
+#footerTop {
+    background-color: #434343;
+}
+#footerBottom {
+    background-color: #202020;
+}
+
+#footerTop,
+#footerBottom {
+    padding-top: var(--mobile-vert-space);
+    padding-left: var(--mobile-horz-space);
+    padding-right: var(--mobile-horz-space);
+    padding-bottom: var(--mobile-vert-space);
+}
+
+#footerTop nav li {
+    line-height: 1.8em;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
 }
