@@ -4,6 +4,7 @@
 :root {
   --mobile-horz-space: 12px;
   --mobile-vert-space: 25px;
+  --breakpoint-lg: 1024px;
 }
 
 
@@ -95,6 +96,10 @@ nav ul {
     overflow: hidden;
 }
 
+#headerImage img {
+	display: block;
+}
+
 .header-text h2 {
     font-size: 24px;
     text-transform: uppercase;
@@ -135,6 +140,8 @@ nav ul {
 
 footer {
     color: #b2b2b2;
+	/* 					FARBE		X	Y	Blur    */
+	text-shadow: rgba(0, 0, 0, 0.5) 1px 2px 2px;
 }
 footer address {
     margin-bottom: var(--mobile-vert-space);
@@ -186,4 +193,88 @@ a:hover {
 
 #footerBottom nav a:hover {
     color: #fff;
+}
+
+.inner-wrapper {
+	position: relative;
+    width: 100%;
+    max-width: var(--breakpoint-lg);
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	
+	header > .inner-wrapper {
+		display: flex;
+	}
+	
+	#mainNavigation {
+		flex: 1;
+		
+		display: flex;
+		align-items: center;
+	}
+	
+	#mainNavigation ul {
+		text-align: right;
+		flex: 1;
+	}
+	
+	#mainNavigation ul li {
+		display: inline-block;
+		text-align: left;
+	}
+	
+	#mainNavigation ul li a {
+		background: none;
+		border-bottom: none;
+	}
+	
+	.header-text {
+		overflow: hidden;
+		position: absolute;
+		bottom: 80px;
+		color: #fff;
+		
+	}
+	
+	.header-text h2 {
+		font-size: 36px;
+	}
+	
+	.header-text p {
+		max-width: 450px;
+		
+	}
+	
+	#headerOverlay {
+		position: relative;
+		top: -50px;
+		margin-left: auto;
+	}
+	
+	footer .inner-wrapper {
+		display: flex;
+	}
+	
+	footer .left,
+	footer .right {
+		flex: 1;
+	}
+	
+	footer .right {
+		text-align: right;
+	}
+	
+	#footerBottom nav {
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	#footerBottom nav ul li {
+		font-size: 1rem;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
 }
