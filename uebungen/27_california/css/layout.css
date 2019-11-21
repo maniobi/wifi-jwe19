@@ -7,6 +7,9 @@
   --breakpoint-lg: 1024px;
 
   --red: #b9151c;
+  --light-grey: #cac8c8;
+  --form-field-background: #e3e3e3;
+  --form-field-background-active: lightgreen;
 }
 
 

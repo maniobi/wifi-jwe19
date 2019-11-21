@@ -29,10 +29,10 @@
                             <li>
                                 <a href="#">Bilder</a>
                             </li>
-                            <li class="active">
-                                <a href="#">Reisetagebuch</a>
-                            </li>
                             <li>
+                                <a href="reisetagebuch.html">Reisetagebuch</a>
+                            </li>
+                            <li class="active">
                                 <a href="kontakt.html">Kontakt</a>
                             </li>
 
@@ -43,83 +43,78 @@
 
             </header>
 
-
             <main>
 
                 <div class="inner-wrapper">
+
+                    <!-- Header der Unterseite -->
                     <header>
-                        <h1>Reisetagebuch</h1>
+                        <h1>Kontakt</h1>
+                        <p class="subheader">
+                            Noch Fragen, ich stehe gerne zur Verfügung.
+                        </p>
                     </header>
 
-
-                    <section class="content-element content-text-image">
-                        <header>
-                            <h2>Tag #1 - Las Vegas</h2>
-                        </header>
-
-                        <div class="content-text-image__image">
-                            <img src="content/tagebuch/tagebuch_01.png" alt="">
-                            <a href="#">Alle Bilder anzeigen</a>
-                        </div>
-
-                        <div class="content-text-image__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur.
-                            </p>
-
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
-
-                            <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                        </div>
-
-                    </section>
+                    <div class="content-element content-google-maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21438.184302292968!2d13.037801049999999!3d47.8052352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf72cc1140ab5220d!2sWIFI%20Salzburg!5e0!3m2!1sde!2sat!4v1574360679141!5m2!1sde!2sat" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
 
 
-                    <section class="content-element content-text-image">
-                        <header>
-                            <h2>Tag #2 - Death Valley</h2>
-                        </header>
+                    <div class="content-element content-contact-form">
+                        <!-- hier findet sich später unser Kontaktformular -->
 
-                        <div class="content-text-image__image">
-                            <img src="content/tagebuch/tagebuch_02.png" alt="">
-                            <a href="#">Alle Bilder anzeigen</a>
-                        </div>
+                        <form action="kontakt_abgeschickt.html" method="post">
 
-                        <div class="content-text-image__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur.
-                            </p>
+                            <div class="form-salutation">
+                                <input type="radio" name="salutation" id="salutation_frau" value="Frau">
+                                <label for="salutation_frau">Frau</label>
 
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
+                                <input type="radio" name="salutation" id="salutation_herr" value="Herr">
+                                <label for="salutation_herr">Herr</label>
+                            </div>
 
-                            <p>
-                                Duis aute irure dolor in reprehenderit in voluptate velit
-                                esse cillum dolore eu fugiat nulla pariatur.
-                            </p>
-                        </div>
+                            <div class="form-name">
+                                <label for="firstname">Vorname</label>
+                                <input type="text" name="firstname" id="firstname" value="">
 
-                    </section>
+                                <label for="lastname">Nachname</label>
+                                <input type="text" name="lastname" id="lastname" value="">
+                            </div>
+
+                            <div class="form-contact-data">
+                                <label for="email">E-Mail Adresse</label>
+                                <input type="email" name="email" id="email" value="">
+
+                                <label for="phone">Telefon-Nr.</label>
+                                <input type="number" name="phone" id="phone" value="">
+                            </div>
+
+                            <div class="form-subject">
+                                <label for="subject">Betreff</label>
+                                <input type="text" name="subject" id="subject" value="">
+                            </div>
+
+                            <div class="form-message">
+                                <label for="message">Ihre Nachricht</label>
+                                <textarea name="message" id="message" rows="8" cols="80"></textarea>
+                            </div>
+
+                            <div class="form-gdpr">
+                                <input type="checkbox" name="gdpr" id="gdpr" value="ok">
+                                <label for="gdpr">
+                                    Ich stimme der Verarbeitung meiner Daten
+                                    im Rahmen der Kontaktanfrage zu und ...bla.
+                                </label>
+                            </div>
+
+                            <div class="form-submit">
+                                <input type="submit" name="submit" id="submit" value="Nachricht abschicken">
+                            </div>
+
+                        </form>
+
+
+                    </div>
 
                 </div>
 
