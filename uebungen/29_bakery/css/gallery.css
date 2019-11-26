@@ -1,0 +1,62 @@
+html * {
+     box-sizing: border-box;
+ }
+
+html, body {
+    margin: 0;
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.content {
+    margin-bottom: 3rem;
+}
+.content h1{
+    margin-top: 4rem;
+}
+
+.gallery {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 50%;
+    max-width: 100%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 600px) {
+
+    .column {
+        -ms-flex: 100%;
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .content {
+        margin-bottom: 5rem;
+    }
+    .content h1{
+        margin-top: 5rem;
+    }
+
+}
+@media screen and (min-width: 800px) {
+
+    .column {
+        -ms-flex: 50%;
+        flex: 1;
+        max-width: 100%;
+    }
+}

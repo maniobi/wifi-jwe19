@@ -1,0 +1,44 @@
+html * {
+     box-sizing: border-box;
+ }
+
+html, body {
+    margin: 0;
+    width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/*img {*/
+    /*width: 100%;*/
+/*}*/
+
+.content {
+    width: 100%;
+    padding: 3em 10%;
+    margin: 0 auto 3em;
+}
+.content h1{
+    margin-top: 0;
+}
+
+.content .one-column {
+    margin: 0 auto;
+    text-align: center;
+}
+
+img.image-header {
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .content {
+        margin-bottom: 5em;
+        width: 80%;
+        padding: 5em 0;
+    }
+
+}
+@media screen and (min-width: 768px) {
+
+
+}
