@@ -1,0 +1,7 @@
+.valid::before {
+    content: '✔';
+
+}
+.valid {
+    color: green !important;
+}

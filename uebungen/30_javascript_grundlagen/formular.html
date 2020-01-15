@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formular validieren mit jQuery</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+
+                <header>
+                    <h1>Registrierung</h1>
+                    <p>Mit diesem Formular können Sie einen neuen Benutzer registrieren.</p>
+                </header>
+
+                <form id="registration_form" name="registrationForm">
+
+                    <div class="form-group row">
+                        <label class="col-4">Anrede</label>
+                        <div class="col-8">
+                            <div class="custom-control custom-radio custom-control-inline">
+
+                                <input name="salutation" id="salutation_0" type="radio" class="custom-control-input" value="Frau">
+                                <label for="salutation_0" class="custom-control-label">Frau</label>
+
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input name="salutation" id="salutation_1" type="radio" class="custom-control-input" value="Herr">
+                                <label for="salutation_1" class="custom-control-label">Herr</label>
+                            </div>
+
+                            <div class="alert alert-danger d-none" id="salutation_error" role="alert">
+                                Bitte wählen Sie eine Anrede.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="firstname" class="col-4 col-form-label">Vorname</label>
+                        <div class="col-8">
+                            <input id="firstname" name="firstname" type="text" class="form-control">
+
+                            <div class="alert alert-danger d-none" id="firstname_error" role="alert">
+                                Bitte geben Sie Ihren Vornamen an.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="lastname" class="col-4 col-form-label">Nachname</label>
+                        <div class="col-8">
+                            <input id="lastname" name="lastname" type="text" class="form-control">
+
+                            <div class="alert alert-danger d-none" id="lastname_error" role="alert">
+                                Bitte geben Sie Ihren Nachnamen an.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email_address" class="col-4 col-form-label">Email</label>
+                        <div class="col-8">
+                            <input id="email_address" name="email_address" type="email" class="form-control">
+
+                            <div class="alert alert-danger d-none" id="email_address_error" role="alert">
+                                Bitte geben Sie Ihre Email-Adresse an.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email_address_confirm" class="col-4 col-form-label">Email bestätigen</label>
+                        <div class="col-8">
+                            <input id="email_address_confirm" name="email_address_confirm" placeholder="Bitte bestätigen Sie Ihre Email-Adresse" type="email" class="form-control">
+
+                            <div class="alert alert-danger d-none" id="email_address_confirm_error" role="alert">
+                                Die Email-Adressen stimmen nicht überein.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="password_phrase" class="col-4 col-form-label">Passwort</label>
+                        <div class="col-8">
+                            <input id="password_phrase" name="password_phrase" placeholder="Geben Sie ein starkes Passwort an" type="password" class="form-control">
+                            <small id="passphrase_rule_1" class="form-text text-muted">Mindestens 8 Zeichen</small>
+                            <small id="passphrase_rule_2" class="form-text text-muted">Enthält mind. einen Buchstaben</small>
+                            <small id="passphrase_rule_3" class="form-text text-muted">Enthält einen Großbuchstaben</small>
+                            <small id="passphrase_rule_4" class="form-text text-muted">Enthält eine Zahl</small>
+                            <small id="passphrase_rule_5" class="form-text text-muted">Enthält ein Sonderzeichen</small>
+
+                            <div class="alert alert-danger d-none" id="password_phrase_error" role="alert">
+                                Das Passwort ist nicht stark genug und/oder entspricht nicht den Kriterien.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="birthday" class="col-4 col-form-label">Geburtsdatum</label>
+                        <div class="col-8">
+                            <input id="birthday" name="birthday" type="date" class="form-control">
+                            <div class="alert alert-danger d-none" id="birthday_error" role="alert">
+                                Geben Sie ein gültiges Datum an.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-4">Datenschutz</label>
+                        <div class="col-8">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input name="privacy" id="privacy" type="checkbox" class="custom-control-input" value="datenschutz_ok">
+                                <label for="privacy" class="custom-control-label">Ja, ich habe die Datenschutzbestimmungen gelesen und bin einverstanden.</label>
+                            </div>
+                            <div class="alert alert-danger d-none" id="privacy_error" role="alert">
+                                Bitte akzeptieren Sie die Datenschutzbestimmungen, sonst lässt sich das Formular nicht abschicken.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-4 col-8">
+                            <button name="submit" type="button" class="btn btn-primary">Abschicken</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="js/formular.js"></script>
+
+</body>
+
+</html>
