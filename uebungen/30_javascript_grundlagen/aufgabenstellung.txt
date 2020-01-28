@@ -1,0 +1,10 @@
+HTML-Dokument:
+Formular bauen (mit Bootstrap)
+ - Text Input (Kundennummer)
+ - Button (zum Abschicken)
+
+jQuery Script:
+ -  Formular-Feld (Kundennummer) Value auslesen
+ -  per $.get die Kundennummer abfragen (https://api.jquery.com/jquery.get/)
+    und das Ergebnis (JSON) in ein DIV #ergebnis schreiben
+
