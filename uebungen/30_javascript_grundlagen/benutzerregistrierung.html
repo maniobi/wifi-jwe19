@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Benutzer Registrierung</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/vendor/bootstrap-datepicker.min.css">
+
+</head>
+
+<body>
+
+
+    <form class="border border-light p-5">
+
+        <p class="h4 mb-4 text-center">Benutzerregistrierung</p>
+
+
+        <div class="custom-control custom-radio custom-control-inline mb-4">
+            <input type="radio" class="custom-control-input required" id="ur_salutation_mrs" name="urSalutation" value="Frau">
+            <label class="custom-control-label" for="ur_salutation_mrs">Frau</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline mb-4">
+            <input type="radio" class="custom-control-input required" id="ur_salutation_mr" name="urSalutation" value="Herr">
+            <label class="custom-control-label" for="ur_salutation_mr">Herr</label>
+        </div>
+
+        <div class="mb-4">
+            <input type="text" id="ur_firstname" class="form-control" placeholder="Vorname">
+        </div>
+
+        <div class="mb-4">
+            <input type="text" id="ur_lastname" class="form-control" placeholder="Nachname">
+        </div>
+        </div>
+
+        <div class="input-group date mb-4">
+            <input type="text" class="form-control" placeholder="Geburtstag" aria-label="Ihr Geburtstag"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">&#128197;</span>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="mb-4">
+            <input type="password" id="ur_password" class="form-control" placeholder="Passwort">
+        </div>
+        </div>
+
+        <div class="mb-4">
+            <input type="password" id="ur_password_confirm" class="form-control" placeholder="Passwort bestätigen">
+        </div>
+        <small id="passwort_helper_block" class="form-text text-muted mb-4">Geben Sie ein sicheres Passwort an.
+            Mindestens 8 Zeichen.</small>
+
+        <div class="mb-4">
+            <input type="email" id="ur_email" class="form-control mb-4" placeholder="E-Mail">
+        </div>
+
+        <div class="mb-4">
+            <input type="text" id="ur_phone" class="form-control" placeholder="Telefonnummer">
+        </div>
+
+        <label for="select_marketing">Wie haben Sie von uns gehört?</label>
+        <select class="browser-default custom-select mb-4" id="select_marketing">
+            <option value="" disabled="" selected="">Wählen sie bitte aus</option>
+            <option value="1">Facebook</option>
+            <option value="2">von einem Freund/Bekannten</option>
+            <option value="3">Sonstige</option>
+        </select>
+        
+        <div class="mb-4 d-none">
+            <label for="select_marketing_info">Bitte genauer...</label>
+            <textarea id="select_marketing_info" class="form-control mb-4"
+                placeholder="Beschreiben Sie uns woher Sie uns kennen..." rows="5"></textarea>
+        </div>
+
+        
+
+        <div class="input-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="ur_file" aria-describedby="ur_file_help">
+                <label class="custom-file-label" for="ur_file">Profilbild hochladen</label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <small id="ur_file_help">Wählen Sie bitte ein Foto für Ihre Profilbild aus</small>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input required" id="ur_gdpr_ok">
+            <label class="custom-control-label" for="ur_gdpr_ok">Datenschutz ok?</label>
+        </div>
+
+        <div class="custom-control custom-checkbox mb-4">
+            <input type="checkbox" class="custom-control-input" id="ur_newsletter">
+            <label class="custom-control-label" for="ur_newsletter">Newsletter abonnieren</label>
+        </div>
+
+        <div class="mb-4">
+            <label for="ur_note">Bemerkung</label>
+            <textarea id="ur_note" class="form-control mb-4" placeholder="Geben Sie hier Ihre zusätzlichen Wünsche, Anregungen oder Beschwerden ein" rows="5"></textarea>
+        </div>
+
+
+        <button class="btn btn-info my-4 btn-block" type="submit">Jetzt registrieren</button>
+
+    
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+    <script src="js/vendor/bootstrap-datepicker.min.js"></script>
+    <script src="js/vendor/locales/bootstrap-datepicker.lt.min.js"></script>
+
+
+    <script src="js/benutzerregistrierung.js"></script>
+
+
+</body>
+
+</html>
