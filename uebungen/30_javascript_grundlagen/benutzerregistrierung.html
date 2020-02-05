@@ -23,36 +23,49 @@
 
 
         <div class="custom-control custom-radio custom-control-inline mb-4">
-            <input type="radio" class="custom-control-input required" id="ur_salutation_mrs" name="urSalutation" value="Frau">
+            <input type="radio" class="custom-control-input required" id="ur_salutation_mrs" name="urSalutation"
+                value="Frau">
             <label class="custom-control-label" for="ur_salutation_mrs">Frau</label>
         </div>
         <div class="custom-control custom-radio custom-control-inline mb-4">
-            <input type="radio" class="custom-control-input required" id="ur_salutation_mr" name="urSalutation" value="Herr">
+            <input type="radio" class="custom-control-input" id="ur_salutation_mr" name="urSalutation" value="Herr">
             <label class="custom-control-label" for="ur_salutation_mr">Herr</label>
+        </div>
+        <div class="alert alert-danger d-none" id="urSalutation_error">
+            Bitte wählen Sie eine Anrede.
         </div>
 
         <div class="mb-4">
             <input type="text" id="ur_firstname" class="form-control" placeholder="Vorname">
         </div>
+        <div class="alert alert-danger d-none" id="ur_firstname_error">
+            Bitte geben Sie Ihren Vornamen an.
+        </div>
 
         <div class="mb-4">
             <input type="text" id="ur_lastname" class="form-control" placeholder="Nachname">
         </div>
+
+        <div class="alert alert-danger d-none" id="ur_lastname_error">
+            Bitte geben Sie Ihren Nachnamen an.
         </div>
 
+
         <div class="input-group date mb-4">
-            <input type="text" class="form-control" placeholder="Geburtstag" aria-label="Ihr Geburtstag"
+            <input type="text" class="form-control" id="ur_birthday" placeholder="Geburtstag" aria-label="Ihr Geburtstag"
                 aria-describedby="basic-addon2">
             <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon2">&#128197;</span>
             </div>
+        </div>
+        <div class="alert alert-danger d-none" id="ur_birthday_error">
+            Bitte geben Sie Ihr Geburtsdatum an.
         </div>
 
         <hr class="my-4">
 
         <div class="mb-4">
             <input type="password" id="ur_password" class="form-control" placeholder="Passwort">
-        </div>
         </div>
 
         <div class="mb-4">
@@ -61,12 +74,22 @@
         <small id="passwort_helper_block" class="form-text text-muted mb-4">Geben Sie ein sicheres Passwort an.
             Mindestens 8 Zeichen.</small>
 
+        <div class="alert alert-danger d-none" id="ur_password_error">
+            Bitte geben Sie ein Passwort an welches den Kriterien entspricht.
+        </div>
+
         <div class="mb-4">
             <input type="email" id="ur_email" class="form-control mb-4" placeholder="E-Mail">
+        </div>
+        <div class="alert alert-danger d-none" id="ur_email_error">
+            Bitte geben Sie eine korrekte Email-Adresse an.
         </div>
 
         <div class="mb-4">
             <input type="text" id="ur_phone" class="form-control" placeholder="Telefonnummer">
+        </div>
+        <div class="alert alert-danger d-none" id="ur_phone_error">
+            Bitte geben Sie Ihre Telefonnummer an.
         </div>
 
         <label for="select_marketing">Wie haben Sie von uns gehört?</label>
@@ -76,14 +99,19 @@
             <option value="2">von einem Freund/Bekannten</option>
             <option value="3">Sonstige</option>
         </select>
-        
+
         <div class="mb-4 d-none">
             <label for="select_marketing_info">Bitte genauer...</label>
             <textarea id="select_marketing_info" class="form-control mb-4"
                 placeholder="Beschreiben Sie uns woher Sie uns kennen..." rows="5"></textarea>
         </div>
 
-        
+        <div class="alert alert-danger d-none" id="select_marketing_error">
+            Bitte geben Sie die Details an, wie Sie von uns gehört oder gelesen haben.
+        </div>
+
+
+
 
         <div class="input-group">
             <div class="custom-file">
@@ -94,11 +122,20 @@
         <div class="mb-4">
             <small id="ur_file_help">Wählen Sie bitte ein Foto für Ihre Profilbild aus</small>
         </div>
+        <div class="alert alert-danger d-none" id="ur_file_error">
+            Bitte wählen Sie ein Bild von Ihrem PC/Gerät aus.
+        </div>
+
+
 
         <div class="custom-control custom-checkbox">
             <input type="checkbox" class="custom-control-input required" id="ur_gdpr_ok">
             <label class="custom-control-label" for="ur_gdpr_ok">Datenschutz ok?</label>
         </div>
+        <div class="alert alert-danger d-none" id="ur_gdpr_ok_error">
+            Bitte stimmen Sie den Datenschutzbestimmungen zu.
+        </div>
+
 
         <div class="custom-control custom-checkbox mb-4">
             <input type="checkbox" class="custom-control-input" id="ur_newsletter">
@@ -107,14 +144,40 @@
 
         <div class="mb-4">
             <label for="ur_note">Bemerkung</label>
-            <textarea id="ur_note" class="form-control mb-4" placeholder="Geben Sie hier Ihre zusätzlichen Wünsche, Anregungen oder Beschwerden ein" rows="5"></textarea>
+            <textarea id="ur_note" class="form-control mb-4"
+                placeholder="Geben Sie hier Ihre zusätzlichen Wünsche, Anregungen oder Beschwerden ein"
+                rows="5"></textarea>
         </div>
 
 
         <button class="btn btn-info my-4 btn-block" type="submit">Jetzt registrieren</button>
 
-    
+
     </form>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="submission_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Formular wurde abgeschickt</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ... hier kommen die Formular-Daten:..
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Alles klar, schließen!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
@@ -127,7 +190,7 @@
     </script>
 
     <script src="js/vendor/bootstrap-datepicker.min.js"></script>
-    <script src="js/vendor/locales/bootstrap-datepicker.lt.min.js"></script>
+    <script src="js/vendor/locales/bootstrap-datepicker.de.min.js"></script>
 
 
     <script src="js/benutzerregistrierung.js"></script>
